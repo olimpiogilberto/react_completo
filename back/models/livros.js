@@ -7,18 +7,28 @@ module.exports = (sequelize, DataType) => {
         },
         titulo: {
             type: DataType.STRING,
-            allowNull: false,
-            validate: { notEmpty: false }
+            allowNull: false
+            // validate: { notEmpty: false 
+        
         },
         preco: {
+            type: DataType.STRING,
+            allowNull: false
+            // validate: { notEmpty: false 
+        
+        },
+        autor: {
             type: DataType.INTEGER,
-            // allowNull: false
-            // defaultValue: false
-        }
+            unique: true,
+            allowNull: false
+            // validate: { notEmpty: false 
+        
+        },
+        
     }, {
         classMethods: {
             associate: (models) => {
-                Livros.belongsTo(models.Autores);
+                Livros.hasMany(models.Tasks);
             }
         }
     });

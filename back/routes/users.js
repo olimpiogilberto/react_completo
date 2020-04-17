@@ -5,7 +5,7 @@ module.exports = app => {
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
-    app.route("/api/users")
+    app.route("/users")
     .get((req, res) => {
       Users.findAll({})
         .then(result => res.json(result))
@@ -24,7 +24,7 @@ module.exports = app => {
         });
         // "/users": Cadastra um novo usuário
 
-    app.route("/api/users/:id")
+    app.route("/users/:id")
       .get((req, res) => {
         // Users.findById(req.params.id, {
         //     attributes: ["id", "name", "email"]

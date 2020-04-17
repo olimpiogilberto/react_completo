@@ -5,7 +5,7 @@ module.exports = app => {
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
-    app.route("/api/tasks")
+    app.route("/tasks")
       .get((req, res) => {
         Tasks.findAll({})
           .then(result => res.json(result))
@@ -24,7 +24,7 @@ module.exports = app => {
       });
       // "/tasks": Cadastra uma nova tarefa
 
-    app.route("/api/tasks/:id")
+    app.route("/tasks/:id")
       .get((req, res) => {
         Tasks.findOne({where: req.params})
 
