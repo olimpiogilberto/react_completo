@@ -4,7 +4,7 @@
   "description": "API de gestão de tarefas",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js"
+    "start": "nodemon index.js"
   },
   "author": "Gilberto Olimpio",
   "dependencies": {

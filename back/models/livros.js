@@ -19,7 +19,7 @@ module.exports = (sequelize, DataType) => {
         },
         autor: {
             type: DataType.INTEGER,
-            unique: true,
+            unique: false,
             allowNull: false
             // validate: { notEmpty: false 
         
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataType) => {
     }, {
         classMethods: {
             associate: (models) => {
-                Livros.hasMany(models.Tasks);
+                Livros.belongsTo(models.Autores);
             }
         }
     });
