@@ -3,8 +3,7 @@ module.exports = (sequelize, DataType) => {
         id: {
             type: DataType.INTEGER,
             primaryKey: true,
-            autoIncrement: true
-        },
+            autoIncrement: true     },
         titulo: {
             type: DataType.STRING,
             allowNull: false
@@ -17,9 +16,8 @@ module.exports = (sequelize, DataType) => {
             // validate: { notEmpty: false 
         
         },
-        autor: {
+        autorId: {
             type: DataType.INTEGER,
-            unique: false,
             allowNull: false
             // validate: { notEmpty: false 
         

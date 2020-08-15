@@ -51,9 +51,7 @@ module.exports = app => {
 
     app.route("/api/autores/:id")
       .get((req, res) => {
-        // Autores.findById(req.params.id, {
-        //     attributes: ["id", "name", "email"]
-        // })
+
         Autores.findOne({where: req.params, attributes: ["id", "nome", "email","createdAt","updatedAt"]})
 
           .then(result => res.json(result))
