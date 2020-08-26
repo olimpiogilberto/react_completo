@@ -22,7 +22,7 @@ module.exports = (sequelize, DataType) => {
     }, {
         classMethods: {
             associate: (models) => {
-                Autores.hasMany(models.Autores);
+                Autores.hasMany(models.Livros);
             }
         }
     });

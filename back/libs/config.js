@@ -1,10 +1,13 @@
 module.exports = {
-    database: "ntask",
-    username: "",
-    password: "",
+    database: "node_mysql",
+    username: "user_node",
+    password: "admin",
+    host : '127.0.0.1',
+    port : '3306',
+    
     params: {
-        dialect: "sqlite",
-        storage: "ntask.sqlite",
+        dialect: "mysql",
+        
         define: {
             underscore: true
         }
